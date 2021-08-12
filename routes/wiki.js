@@ -45,4 +45,8 @@ router.get('/add', async (req, res, next) => {
   }
 })
 
+router.get('/:slug', (req, res, next) => {
+  res.send(`hit dynamic route at ${req.params.slug}`);
+});
+
 module.exports = router;
